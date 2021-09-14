@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <link rel="stylesheet" href="./Styles/Coquille.css" />
+ <link rel="shortcut icon" type="image/png" href="./Images/fav.png"/>
+  <head>
+    <meta charset="utf-8" />
+    <title>Accueil | La Coquille</title>
+  </head>
+  <body>
+
+  <header>
+    <a href="./Coquille.html"><img class="flotte" id="logo" src="./Images/logo.png" alt="logo"/></a>
+    <!--menu de navigation-->
+    <div class="navbar">
+        <a class="active" href="./Coquille.html">Accueil</a>
+        <a href="./Pages/le_resto.html">Le restaurant</a>
+        <a href="./Pages/La_carte.html" title="Découvrez nos spécialités!">Notre carte</a>
+        <a href="./Pages/Reservation.html">Réservation</a>
+        <a href="./Pages/Informations.html">Contact</a>
+    </div>
+  </header>
+  <hr class="hrheader"></hr>
+  <section class="borderDiv">
+      <h1>~ Restaurant La Coquille ~<br />✩✩✩</h1>
+
+      <div id="Bienvenue">
+
+        <figure>
+          <img id="imageSalle" src="./Images/entree-resto.jpg" alt="Photo du restaurant1"/>
+          <figcaption>L'entrée du restaurant</figcaption>
+        </figure>
+        <p>Bienvenue à <em>La Coquille</em>, restaurant <strong>3 étoiles</strong> depuis 2015, en plein coeur du Pays Basque près de Bidart. <br> Très bien situé à l'orée de la forêt dans les terres, nous vous proposons un espace rénové pour vous accueillir ainsi qu'une véranda ouverte sur le bois. Ce restaurant est une histoire de famille depuis quatre générations. <br>
+      Venez profiter de notre cadre exceptionnel au milieu de la nature pour un moment apaisant et goûtez à la gastronomie française avec nos spécialités cuisinées par notre chef à partir des produits de saison de la région. Découvrez notre carte et nos vins et réservez votre table dès maintenant.
+      </p>
+
+      </div>
+      <hr class="hrheader"></hr>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="./Images/grande-Salle1.jpg" style="width:100%"></img>
+            <div class="text">La Grande Salle</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="./Images/grande-Salle2.jpg" style="width:100%"></img>
+            <div class="text">La Grande Salle</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="./Images/veranda1.jpg" style="width:100%"></img>
+            <div class="text">La Véranda</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="./Images/veranda2.jpg" style="width:100%"></img>
+            <div class="text">La Véranda</div>
+        </div>
+        <!-- Boutons slide -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- The dots/circles -->
+        <div id="dotDiv" style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+      </div>
+
+  </section>
+  <hr class="hrheader"></hr>
+
+  <footer>
+    <ul class="basdepage">
+    <li><br /><u>Réservez dès maintenant :</u><br />au +33 5 56 28 73 12<br /> ou via notre <a href="./Pages/Reservation.html">formulaire en ligne</a></li>
+    <li><br /> Restaurant La Coquille <br /> ✩✩✩<br /></li>
+    <li><br /><u>Jours d'ouvertures :</u><br /><b>Déjeuner</b> du <i>Mardi</i> au <i>Dimanche</i><br /><b>Dîner</b> du <i>Mardi</i> au <i>Samedi</i><br /></li>
+    </ul>
+  <br />
+  </footer>
+
+
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+
+  </body>
+
+</html>

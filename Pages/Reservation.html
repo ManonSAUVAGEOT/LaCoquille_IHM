@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<link rel="stylesheet" href="../Styles/Coquille.css" />
+<link rel="shortcut icon" type="image/png" href="../Images/fav.png"/>
+<head>
+    <meta charset="utf-8" />
+    <title>Réservation | La Coquille</title>
+    <script type="text/javascript" src="../Scripts/reservation.js"></script>
+</head>
+
+<body>
+  <header>
+      <a href="../Coquille.html"><img class="flotte" id="logo" src="../Images/logo.png" alt="logo"/></a>
+    <div class="navbar">
+        <a href="../Coquille.html">Accueil</a>
+        <a href="./le_resto.html">Le restaurant</a>
+        <a href="./La_carte.html" title="Découvrez nos spécialités!">Notre carte</a>
+        <a class="active" href="./Reservation.html">Réservation</a>
+        <a href="./Informations.html">Contact</a>
+    </div>
+  </header>
+  <hr class="hrheader">
+
+  <section id="formulaire" class="borderDiv">
+    <h1> ~ Formulaire de réservation ~</h1>
+    <form action="" method="">
+      <fieldset>
+        <legend>Vos informations personnelles</legend>
+        <div  class="formDiv" id="divForHeure">
+          <input type="radio" id="madame" name="civilite" value="madame">
+          <label for="madame">Madame</label>
+          <input type="radio" id="monsieur" name="civilite" value="monsieur">
+          <label for="monsieur">Monsieur</label>
+        </div>
+        <div class="formDiv">
+          <label for="nom">Nom <span class="redText">*</span> : </label>
+          <input type="text" name="nom" id="nom" required>
+        </div>
+        <div class="formDiv">
+          <label for="prenom">Prénom <span class="redText">*</span> : </label>
+          <input type="text" name="prenom" id="prenom" required>
+        </div>
+        <div class="formDiv">
+          <label for="numTel">Numéro de téléphone <span class="redText">*</span> : </label>
+          <input type="tel" name="numTel" id="numTel" pattern="[0-9]{10}" placeholder="0123456789" required>
+       </div>
+      </fieldset>
+      <fieldset>
+        <legend>Votre réservation</legend>
+        <div class="formDiv">
+            <label for="nbpers">Nombre de personnes <span class="redText">*</span> : </label>
+            <input type="number" min="1" max="12" value="1" name="nbpers" id="nbpers" required>
+            <img id="imgInfoNPers" title="Nombre de personnes entre 1 et 12" width="15px" src="../Icones/info-circle-solid.svg" />
+        </div>
+        <div class="formDiv">
+            <label for="date">Date de réservation <span class="redText">*</span> : </label>
+            <input type="date" name="date" id="date" min="2020-11-01" placeholder="JJ/MM/AAAA" required>
+        </div>
+        <div  class="formDiv" id="divForHeure">
+        <label for="heure">Heure d'arrivée <span class="redText">*</span> : </label>
+        <ul>
+          <li>
+            <input type="radio" id="midi" name="heure" value="midi" onchange="AfficheSelectM()">
+            <label for="midi">Midi</label>
+            <select id="choixHeureM" name="choixHeureM">
+                <option value="12">12h00</option>
+                <option value="12-30">12h30</option>
+                <option value="13">13h00</option>
+            </select>
+          </li>
+          <li>
+            <input type="radio" id="soir" name="heure" value="soir" onchange="AfficheSelectS()">
+            <label for="soir">Soir</label>
+            <select id="choixHeureS" name="choixHeureS">
+                <option value="19-30">19h30</option>
+                <option value="20">20h00</option>
+                <option value="20-30">20h30</option>
+          </select>
+          </li>
+        </ul>
+      </div>
+      <div class="formDiv">
+        <label>
+          <span for="salle">Choix de la salle : </span>
+          <select id="salle" name="choixSalle">
+            <option value="sallePrinc">--------</option>
+            <option value="grandeSalle">Grande Salle</option>
+            <option value="veranda">Véranda</option>
+          </select>
+        </label>
+      </div>
+      <div class="formDiv">
+        <label for="com">Commentaires : </label><br />
+        <textarea  rows="10" id="com" ></textarea>
+      </div>
+        </fieldset>
+        <fieldset>
+          <legend>Validation de votre réservation</legend>
+          <p>Les champs suivis de <span class="redText">*</span> sont obligatoires.</p>
+          <div class="button">
+            <button class="buttonSubmit" type="submit" onclick="test()">Envoyer</button>
+         </div>
+        </fieldset>
+   </form>
+
+
+
+<p>Pour plus de renseignements ou pour réserver par téléphone, retrouvez toutes nos coordonnées <a href="./Informations.html"> ici</a>.
+</p>
+  </section>
+
+  <footer>
+    <ul class="basdepage">
+    <li><br /><u>Réservez dès maintenant :</u><br />au +33 5 56 28 73 12<br /> ou via notre <a href="./Reservation.html">formulaire en ligne</a></li>
+    <li><br /> Restaurant La Coquille <br /> ✩✩✩<br /></li>
+    <li><br /><u>Jours d'ouvertures :</u><br /><b>Déjeuner</b> du <i>Mardi</i> au <i>Dimanche</i><br /><b>Dîner</b> du <i>Mardi</i> au <i>Samedi</i><br /></li>
+    </ul>
+  <br />
+  </footer>
+
+
+</body>
+</html>
