@@ -5,5 +5,4 @@ Réalisation d'une page web pour un restaurant fictif.
 
 ## Auteurs
 
-Elisa RUPEREZ
-Manon SAUVAGEOT
+Elisa RUPEREZ et Manon SAUVAGEOT
